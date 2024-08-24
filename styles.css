@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Pincode Heading and Message */
+#pincodeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+#displayPincode {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+#pincodeMessage {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Loader Styles */
+.loader {
+    display: none;
+    margin: 20px auto;
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #007BFF;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error Message Styles */
+.error {
+    color: red;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+/* Filter Input Styles with Search Icon */
+#filterInput {
+    width: 90%;
+    padding: 10px 10px 10px 40px; /* Add padding to the left to make space for the icon */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background: url('https://img.icons8.com/ios-glyphs/30/000000/search.png') no-repeat 10px center;
+    background-size: 20px 20px; /* Adjust the size of the icon */
+}
+
+#filterInput::placeholder {
+    color: #999;
+    font-size: 16px;
+}
+
+/* Result Container Styles */
+.result-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.result-item {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.result-item div {
+    display: flex;
+    justify-content: flex-start; /* Aligns items at the start */
+    align-items: center; /* Vertically aligns the text */
+    margin-bottom: 8px;
+}
+
+.result-item div strong {
+    margin-right: 10px; /* Adds space between heading and information */
+    color: #007BFF;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    input[type="text"], button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    .result-item div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
